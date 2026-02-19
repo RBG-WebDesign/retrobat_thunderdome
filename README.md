@@ -18,14 +18,38 @@ This repository contains a **config-only backup** of a working RetroBat setup.
 ## Restore Steps (Windows)
 1. Install RetroBat to `C:\RetroBat`.
 2. Install/download the base theme `Hypermax-Plus-PixN` from RetroBat Theme Downloader.
-3. Copy the `retrobat\` folder contents from this repo onto `C:\RetroBat` (merge/overwrite).
-4. Copy `windows-startup\RetroBat-Controller-Order.cmd` to:
-   `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\`
-5. Launch RetroBat.
+3. Run the restore script from this repo:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-RetroBatConfig.ps1
+```
+
+4. Launch RetroBat.
+
+## Restore Script Options
+Preview only (no file changes):
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-RetroBatConfig.ps1 -WhatIf
+```
+
+Skip backup copy of existing files:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-RetroBatConfig.ps1 -SkipBackup
+```
+
+Skip Startup folder helper install:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-RetroBatConfig.ps1 -SkipStartupShortcut
+```
 
 ## Notes
 - Controller order map is stored in:
   `C:\RetroBat\system\controller-port-map.json`
 - Enforcer script is:
   `C:\RetroBat\tools\enforce-controller-order.ps1`
+- Automated restore script is:
+  `.\scripts\Restore-RetroBatConfig.ps1`
 - This repo is intentionally light and portable for version control.
