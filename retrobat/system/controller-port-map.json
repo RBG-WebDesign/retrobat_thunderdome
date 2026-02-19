@@ -1,0 +1,22 @@
+﻿{
+    "SchemaVersion":  2,
+    "IdentityPriority":  [
+                             "LocationPath",
+                             "DevicePath"
+                         ],
+    "Player1":  {
+                    "LocationPath":  "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(1)",
+                    "DevicePath":  "USB\\VID_0079&PID_0006\\5&1E7E0B48&0&1",
+                    "Guid":  "03000000790000000600000000000000",
+                    "Name":  "Generic USB Joystick"
+                },
+    "Player2":  {
+                    "LocationPath":  "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(2)",
+                    "DevicePath":  "USB\\VID_0079&PID_0006\\5&1E7E0B48&0&2",
+                    "Guid":  "03000000790000000600000000000000",
+                    "Name":  "Generic USB Joystick"
+                },
+    "DegradedMode":  false,
+    "DegradedReason":  "",
+    "LastUpdated":  "2026-02-19T11:34:07-08:00"
+}
